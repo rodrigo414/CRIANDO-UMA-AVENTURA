@@ -3,86 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>Em busca da cidade perdida</title>
+    <title>Em Busca do Distrito Secreto</title>
+    <style>
+        /* CSS adaptado para o tema */
+        body {
+            background-color: #1D4221; /* Cor de fundo inspirada no original */
+            color: white;
+            font-family: "Bai Jamjuree", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ajustado para preencher a tela */
+            margin: 0;
+            padding: 20px; /* Adicionado padding para respiro em telas pequenas */
+            box-sizing: border-box; /* Garante que padding não estoure o layout */
+        }
+        main {
+            text-align: center;
+            max-width: 600px; /* Largura máxima para o conteúdo */
+            background-color: #2a5a2e; /* Fundo mais escuro para o cartão */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+        .passo {
+            display: none;
+        }
+        .passo.ativo {
+            display: block;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #64A712; /* Cor de botão inspirada no original */
+            color: white;
+            font-family: "Bai Jamjuree", sans-serif;
+            border: none;
+            padding: 12px 25px; /* Botões um pouco maiores */
+            margin: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #508a0e;
+            transform: translateY(-2px);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px; /* Bordas arredondadas para imagens */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
     <main>
         <div class="passo ativo" id="passo-0">
-            <img src="img/cenario-passo0.png" alt="">
-            <p>Um dia desses, dentro de um livro da biblioteca da escola, eu descobri uma carta antiga sobre uma cidade perdida, escondida por riquezas e belezas naturais. Nessa carta, a autora deixa algumas pistas para encontrar essa cidade e eu decidi segui-las!</p>
-            <button class="btn-proximo" data-proximo="1">Rio de Janeiro</button>
-            <button class="btn-proximo" data-proximo="2">Pernambuco</button>
+            <img src="https://cdna.artstation.com/p/assets/images/images/035/082/619/large/dan-mccabe-concept-city-design-2021-final.jpg?1613994324" alt="Capa da aventura - Uma cidade grande vista de cima, em estilo de desenho.">
+            <p>Um dia desses, enquanto vasculhava livros empoeirados na biblioteca da escola, me deparei com uma carta antiga dentro de um deles. Ela falava sobre um <b>Distrito Secreto</b>, escondido sob as ruas de concreto e aço de uma metrópole. A carta, escrita por alguém que parecia ter estado lá, deixava pistas enigmáticas. Decidi que essa seria a minha aventura!</p>
+            <p>Sua jornada começa... Escolha qual metrópole brasileira esconde o Distrito Secreto:</p>
+            <button class="btn-proximo" data-proximo="1">São Paulo</button>
+            <button class="btn-proximo" data-proximo="2">Brasília</button>
+            <button class="btn-proximo" data-proximo="3">Recife</button>
         </div>
+
         <div class="passo" id="passo-1">
-            <p>Você começa sua jornada no Rio de Janeiro, subindo o Pico da Tijuca ao amanhecer para encontrar a primeira pista.</p>
-            <button class="btn-proximo" data-proximo="3">Procurar a pista no topo do pico</button>
-            <button class="btn-proximo" data-proximo="4">Desistir e voltar para casa</button>
-        </div>
-        <div class="passo" id="passo-2">
-            <p>Em Pernambuco, você visita a histórica cidade de Olinda. Na carta, uma das pistas indica que para localizar a entrada para a cidade perdida você deve procurar a próxima pista em um dos pontos turísticos da cidade. Por qual você começa?</p>
-            <button class="btn-proximo" data-proximo="5">Investigar as igrejas antigas</button>
-            <button class="btn-proximo" data-proximo="6">Explorar as praias próximas</button>
-        </div>
-        <div class="passo" id="passo-3">
-            <p>No topo do Pico da Tijuca, você encontra uma antiga inscrição apontando que a próxima pista está
-                localizada no Amazonas.</p>
-            <button class="btn-proximo" data-proximo="7">Seguir para o Amazonas</button>
+            <img src="https://img.freepik.com/vetores-gratis/ilustracao-de-arranha-ceus-da-cidade_23-2149487779.jpg?w=740&t=st=1700438183~exp=1700438783~hmac=50b526d1a9e88d01b17a1b025757d54407b46d75c9428c0352ff2076046e7f22" alt="Panorama urbano de São Paulo, estilo desenho.">
+            <p>Você decide começar sua jornada em <b>São Paulo</b>. A primeira pista aponta para um dos pontos mais altos da cidade, um observatório com uma vista panorâmica.</p>
+            <button class="btn-proximo" data-proximo="4">Procurar a pista no topo do observatório</button>
+            <button class="btn-proximo" data-proximo="5">Desistir e voltar para casa</button>
         </div>
 
         <div class="passo" id="passo-4">
-            <img src="img/cenario-passo4-voltar-casa.png" alt="imagem voltando para casa e desitindo da aventura">
-            <p>Você decide que a aventura é grande demais e volta para casa, mas sempre se pergunta o que teria
-                encontrado.</p>
+            <img src="https://img.freepik.com/vetores-gratis/ilustracao-de-arranha-ceus-da-cidade_23-2149487779.jpg?w=740&t=st=1700438183~exp=1700438783~hmac=50b526d1a9e88d01b17a1b025757d54407b46d75c9428c0352ff2076046e7f22" alt="Observatório moderno em uma cidade grande, estilo desenho.">
+            <p>No topo do observatório em São Paulo, entre a névoa da cidade e o brilho dos letreiros, você encontra uma gravura antiga em uma das janelas, indicando que a próxima pista está na <b>zona portuária do Rio de Janeiro</b>.</p>
+            <button class="btn-proximo" data-proximo="10">Seguir para o Rio de Janeiro</button>
         </div>
-
-        <div class="passo" id="passo-5">
-            <p>Nas igrejas de Olinda, você descobre um mapa antigo escondido atrás de um altar, apontando que a próxima
-                pista está no Amazonas.</p>
-            <button class="btn-proximo" data-proximo="7">Viajar para o Amazonas</button>
+        <div class="passo" id="passo-2">
+            <img src="https://img.freepik.com/vetores-gratis/ilustracao-de-paisagem-urbana-geometrica_23-2148784386.jpg?w=740&t=st=1700438258~exp=1700438858~hmac=f2d1e02f90f23f8e6e58f0015b6c2d1b5a5b508d511b8a5d20f92b45e7f12e8b" alt="Arquitetura futurista de Brasília, estilo desenho.">
+            <p>Em <b>Brasília</b>, a carta indica que a primeira pista está em um dos icônicos edifícios do centro. Você precisa descobrir qual deles guarda o segredo.</p>
+            <button class="btn-proximo" data-proximo="6">Investigar os museus e centros culturais</button>
+            <button class="btn-proximo" data-proximo="7">Explorar os parques e monumentos ao ar livre</button>
         </div>
 
         <div class="passo" id="passo-6">
-            <p>Explorando as praias, você encontra uma caverna escondida, mas ela leva a um beco sem saída.</p>
-            <button class="btn-proximo" data-proximo="8">Voltar e explorar as igrejas</button>
+            <img src="https://img.freepik.com/vetores-gratis/ilustracao-de-paisagem-urbana-geometrica_23-2148784386.jpg?w=740&t=st=1700438258~exp=1700438858~hmac=f2d1e02f90f23f8e6e58f0015b6c2d1b5a5b508d511b8a5d20f92b45e7f12e8b" alt="Interior de um museu moderno em Brasília, estilo desenho.">
+            <p>Nos museus de Brasília, você descobre um mapa antigo escondido em uma exposição sobre a história da cidade, apontando que a próxima pista está na <b>zona portuária do Rio de Janeiro</b>.</p>
+            <button class="btn-proximo" data-proximo="10">Viajar para o Rio de Janeiro</button>
         </div>
 
         <div class="passo" id="passo-7">
-            <p>No Amazonas, a busca pela cidade perdida se intensifica. Você se depara com um rio bifurcado.</p>
-            <button class="btn-proximo" data-proximo="9">Seguir pelo rio à esquerda</button>
-            <button class="btn-proximo" data-proximo="10">Seguir pelo rio à direita</button>
+            <img src="https://img.freepik.com/vetores-gratis/ilustracao-de-paisagem-urbana-geometrica_23-2148784386.jpg?w=740&t=st=1700438258~exp=1700438858~hmac=f2d1e02f90f23f8e6e58f0015b6c2d1b5a5b508d511b8a5d20f92b45e7f12e8b" alt="Parque com monumentos futuristas em Brasília, estilo desenho.">
+            <p>Explorando os parques, você encontra algumas passagens secretas, mas elas levam apenas a túneis de manutenção, sem sinais do Distrito Secreto.</p>
+            <button class="btn-proximo" data-proximo="6">Voltar e explorar os museus</button>
+        </div>
+        <div class="passo" id="passo-3">
+            <img src="https://img.freepik.com/vetores-gratis/paisagem-urbana-simples-com-arranha-ceus-e-parques_23-2148261314.jpg?w=740&t=st=1700438341~exp=1700438941~hmac=02e64627419e71050a4185794821a719543e0258169e5d475ce91b5c2a138c7f" alt="Cena urbana de Recife com pontes e rios, estilo desenho.">
+            <p>Sua jornada começa em <b>Recife</b>. A pista inicial te leva a uma das pontes mais antigas da cidade, onde diz que "a água murmura segredos".</p>
+            <button class="btn-proximo" data-proximo="8">Explorar a área da ponte em busca de pistas visuais</button>
+            <button class="btn-proximo" data-proximo="9">Conversar com comerciantes locais sobre lendas antigas</button>
         </div>
 
         <div class="passo" id="passo-8">
-            <p>De volta às igrejas, você finalmente encontra o mapa antigo. Agora, para o Amazonas!</p>
-            <button class="btn-proximo" data-proximo="7">Seguir para o Amazonas</button>
+            <img src="https://img.freepik.com/vetores-gratis/paisagem-urbana-simples-com-arranha-ceus-e-parques_23-2148261314.jpg?w=740&t=st=1700438341~exp=1700438941~hmac=02e64627419e71050a4185794821a719543e0258169e5d475ce91b5c2a138c7f" alt="Detalhe de uma ponte antiga em Recife com símbolos, estilo desenho.">
+            <p>Na área da ponte em Recife, sob uma das estruturas de ferro, você encontra um símbolo entalhado que corresponde a uma figura no mapa. Ele aponta para um <b>bairro boêmio e artístico de Salvador</b>, onde "a arte encontra o antigo".</p>
+            <button class="btn-proximo" data-proximo="15">Seguir para Salvador</button>
         </div>
 
         <div class="passo" id="passo-9">
-            <p>O rio à esquerda leva você a uma cachoeira escondida com inscrições antigas que revelam a entrada da
-                cidade perdida.</p>
-            <button class="btn-proximo" data-proximo="11">Explorar a cidade perdida</button>
+            <img src="https://img.freepik.com/vetores-gratis/paisagem-urbana-simples-com-arranha-ceus-e-parques_23-2148261314.jpg?w=740&t=st=1700438341~exp=1700438941~hmac=02e64627419e71050a4185794821a719543e0258169e5d475ce91b5c2a138c7f" alt="Livreiro em rua movimentada de Recife, estilo desenho.">
+            <p>Ao conversar com um velho livreiro perto da ponte, ele te conta sobre histórias de passagens subterrâneas usadas por artistas e revolucionários no passado. Ele sugere que um grafite específico em um beco famoso em <b>São Paulo</b> pode ser a chave para desvendar o próximo passo.</p>
+            <button class="btn-proximo" data-proximo="17">Viajar para São Paulo para procurar o grafite</button>
         </div>
-
         <div class="passo" id="passo-10">
-            <p>O rio à direita termina em uma área pantanosa. Apesar de belas vistas, não há sinais da cidade perdida
-                aqui.</p>
-            <button class="btn-proximo" data-proximo="12">Retornar e tentar o outro rio</button>
+            <img src="https://img.freepik.com/vetores-gratis/vista-aerea-de-uma-cidade-com-muitos-predios_1047-674.jpg?w=740&t=st=1700438411~exp=1700439011~hmac=05391a1a9e3345d34208a0d4c9861614917548a30689e4726b485d95393b4841" alt="Zona portuária do Rio de Janeiro, estilo desenho.">
+            <p>Na <b>zona portuária do Rio de Janeiro</b>, a busca pelo Distrito Secreto se intensifica. Você se depara com duas vielas escuras.</p>
+            <button class="btn-proximo" data-proximo="11">Seguir pela viela à esquerda</button>
+            <button class="btn-proximo" data-proximo="12">Seguir pela viela à direita</button>
         </div>
 
         <div class="passo" id="passo-11">
-            <img src="img/cenario-passo11-cidade-perdida.png" alt="encontrando uma cidade maravilhosa perdida no Amazonas">
-            <p>Dentro da cidade perdida, você descobre tesouros inimagináveis e decide se dedicar a estudar e preservar
-                este lugar</p>
+            <img src="https://img.freepik.com/vetores-gratis/vista-aerea-de-uma-cidade-com-muitos-predios_1047-674.jpg?w=740&t=st=1700438411~exp=1700439011~hmac=05391a1a9e3345d34208a0d4c9861614917548a30689e4726b485d95393b4841" alt="Viela escura com porta misteriosa, estilo desenho.">
+            <p>A viela à esquerda leva você a uma antiga porta de ferro em um muro pichado, com códigos e símbolos que, decifrados, revelam a entrada para o Distrito Secreto.</p>
+            <button class="btn-proximo" data-proximo="14">Explorar o Distrito Secreto</button>
         </div>
 
         <div class="passo" id="passo-12">
-            <p>Retornando e escolhendo o rio à esquerda, você finalmente encontra a cachoeira escondida e as inscrições
-                que levam à cidade perdida.</p>
-            <button class="btn-proximo" data-proximo="11">Explorar a cidade perdida</button>
+            <img src="https://img.freepik.com/vetores-gratis/vista-aerea-de-uma-cidade-com-muitos-predios_1047-674.jpg?w=740&t=st=1700438411~exp=1700439011~hmac=05391a1a9e3345d34208a0d4c9861614917548a30689e4726b485d95393b4841" alt="Beco sem saída com grafites, estilo desenho.">
+            <p>A viela à direita termina em um beco sem saída, cheio de grafites e lixo. Apesar do visual urbano interessante, não há sinais do Distrito Secreto aqui.</p>
+            <button class="btn-proximo" data-proximo="10">Retornar e tentar a outra viela</button>
+        </div>
+        <div class="passo" id="passo-15">
+            <img src="https://img.freepik.com/vetores-gratis/vista-da-cidade-noturna-com-arranha-ceus-e-luzes-brilhantes_107791-3091.jpg?w=740&t=st=1700438487~exp=1700439087~hmac=d24b611e974e304b7b3b3a9709d3b01a2f64c67f40778f5f2478f7236940822a" alt="Bairro boêmio de Salvador com casarões antigos, estilo desenho.">
+            <p>Em <b>Salvador</b>, o bairro boêmio e artístico é um emaranhado de ladeiras e casarões antigos. A pista indica que a entrada para o Distrito Secreto está ligada a uma manifestação artística específica.</p>
+            <button class="btn-proximo" data-proximo="16">Investigar galerias de arte e ateliês</button>
+            <button class="btn-proximo" data-proximo="20">Procurar por murais ou instalações de arte de rua</button>
+        </div>
+
+        <div class="passo" id="passo-16">
+            <img src="https://img.freepik.com/vetores-gratis/vista-da-cidade-noturna-com-arranha-ceus-e-luzes-brilhantes_107791-3091.jpg?w=740&t=st=1700438487~exp=1700439087~hmac=d24b611e974e304b7b3b3a9709d3b01a2f64c67f40778f5f2478f7236940822a" alt="Interior de galeria de arte com pinturas, estilo desenho.">
+            <p>Nas galerias de arte, você encontra uma série de pinturas abstratas que, juntas, formam um padrão. O padrão leva a um antigo porão de um casarão, onde uma passagem secreta para o Distrito Secreto é revelada.</p>
+            <button class="btn-proximo" data-proximo="14">Explorar o Distrito Secreto</button>
+        </div>
+
+        <div class="passo" id="passo-20">
+            <img src="https://img.freepik.com/vetores-gratis/vista-da-cidade-noturna-com-arranha-ceus-e-luzes-brilhantes_107791-3091.jpg?w=740&t=st=1700438487~exp=1700439087~hmac=d24b611e974e304b7b3b3a9709d3b01a2f64c67f40778f5f2478f7236940822a" alt="Mural de rua com arte secreta, estilo desenho.">
+            <p>Ao analisar os murais de rua, você percebe que um deles, em particular, possui uma estranha perspectiva. Ao se aproximar, uma parte do muro se move, revelando uma escadaria escura que desce para o subsolo.</p>
+            <button class="btn-proximo" data-proximo="14">Descer a escadaria e explorar o Distrito Secreto</button>
+        </div>
+        <div class="passo" id="passo-17">
+            <img src="https://img.freepik.com/vetores-gratis/cidade-futurista-e-arranha-ceus-com-estilo-de-desenho-animado_23-2148784385.jpg?w=740&t=st=1700438549~exp=1700439149~hmac=502e737c3a067f13b190f890259b6c0e81c0c6604618e472251a37a7b8e1a179" alt="Grafite complexo em beco urbano, estilo desenho.">
+            <p>Chegando a <b>São Paulo</b> e encontrando o beco mencionado, você se depara com o grafite. Ele é complexo e cheio de símbolos.</p>
+            <button class="btn-proximo" data-proximo="18">Tentar decifrar o grafite no local</button>
+            <button class="btn-proximo" data-proximo="19">Tirar uma foto e procurar ajuda de um especialista em arte urbana</button>
+        </div>
+
+        <div class="passo" id="passo-18">
+            <img src="https://img.freepik.com/vetores-gratis/cidade-futurista-e-arranha-ceus-com-estilo-de-desenho-animado_23-2148784385.jpg?w=740&t=st=1700438549~exp=1700439149~hmac=502e737c3a067f13b190f890259b6c0e81c0c6604618e472251a37a7b8e1a179" alt="Entrada secreta de metrô, estilo desenho.">
+            <p>Você passa horas no beco, analisando o grafite. De repente, uma sequência de números e letras salta aos seus olhos. É um código de acesso para uma entrada discreta no metrô, que leva a um nível não mapeado.</p>
+            <button class="btn-proximo" data-proximo="14">Seguir o código e entrar no metrô</button>
+        </div>
+
+        <div class="passo" id="passo-19">
+            <img src="https://img.freepik.com/vetores-gratis/cidade-futurista-e-arranha-ceus-com-estilo-de-desenho-animado_23-2148784385.jpg?w=740&t=st=1700438549~exp=1700439149~hmac=502e737c3a067f13b190f890259b6c0e81c0c6604618e472251a37a7b8e1a179" alt="Prédio abandonado no centro de São Paulo, estilo desenho.">
+            <p>Você envia a foto do grafite para um fórum online de arte urbana. Um especialista te contata, revelando que o grafite é uma obra rara de um coletivo secreto que escondeu pistas em vários de seus trabalhos. Ele te dá as coordenadas exatas de um prédio abandonado no centro, onde a próxima peça do quebra-cabeça o espera.</p>
+            <button class="btn-proximo" data-proximo="14">Ir para o prédio abandonado</button>
+        </div>
+        <div class="passo" id="passo-5">
+            <img src="https://cdna.artstation.com/p/assets/images/images/035/082/619/large/dan-mccabe-concept-city-design-2021-final.jpg?1613994324" alt="Personagem desanimado voltando para casa, com uma cidade ao fundo.">
+            <p>Você decide que a aventura é grande demais e volta para casa, mas sempre se pergunta o que teria encontrado.</p>
+        </div>
+
+        <div class="passo" id="passo-14">
+            <img src="https://img.freepik.com/vetores-gratis/paisagem-urbana-simples-com-arranha-ceus-e-parques_23-2148261314.jpg?w=740&t=st=1700438341~exp=1700438941~hmac=02e64627419e71050a4185794821a719543e0258169e5d475ce91b5c2a138c7f" alt="Vista de uma cidade subterrânea vibrante com luzes e arte, estilo desenho.">
+            <p>Dentro do <b>Distrito Secreto</b>, você descobre uma rede de túneis, salas secretas e uma comunidade underground vibrante, repleta de arte, inovações e histórias nunca contadas. Você decide se dedicar a entender e proteger este lugar único.</p>
         </div>
     </main>
     <script src="script.js"></script>
